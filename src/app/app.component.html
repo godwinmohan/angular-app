@@ -3,13 +3,8 @@
 
 <form #bookForm=ngForm novalidate (ngSubmit)="onSubmit()">
 
-  {{bookForm.value | json}}
-  <hr />
-
-  {{bookModel | json}}
-
   <div class="form-group">
-    <label>Book ID</label> <input type="text" name="id" class="form-control" [(ngModel)]="bookModel.id"/>
+    <label>Book ID</label> <input type="text" name="id" required class="form-control" [(ngModel)]="bookModel.id"/>
   </div>
 
   <div class="form-group">
